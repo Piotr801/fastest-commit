@@ -1,37 +1,54 @@
-	<body> 				
-		<ul class="nav nav-pills">	  
-		<li class="nav-item">  
-		 <!-- This allows to add any name -->
-		<li class="nav-item dropdown">  
-		<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Renewable Energy</a>  
-		<ul class="dropdown-menu">  
-		<li><a class="dropdown-item" href="#"><b>Renewable Energy Today</b></a></li> 
-<li><hr class="dropdown-divider"></hr></li>		
-		<li><a class="dropdown-item" href="#"><b>Geothermal Energy In Iceland</b></a></li>  		  
-		</ul>  
-		</li>  				 
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head> 	
+		<title>Ways to introduce modern energy</title>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<script> 
 
-		<li class="nav-item dropdown">  
-		<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Fossil Fuels</a>  
-		<ul class="dropdown-menu">  
-		<li><a class="dropdown-item" href="#"><b>Fossil Fuels And The Environment</b></a></li>  
-		<li><hr class="dropdown-divider"></hr></li>
-		<li><a class="dropdown-item" href="#"><b>Fossil Fuels And The Environment</b></a></li>	
-		</ul>  
-		</li>  
-		<!-- This is a closed fundamental element that is connected with the above one's -->
+function validate(){ 
+// This is used to start a java script //
 
-		<li class="nav-item dropdown">  
-		<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Modern Energy</a>  
-		<ul class="dropdown-menu">  
-		<li><a class="dropdown-item" href="file:///C:/Users/piotr/Downloads/Web%20design%20CA/index.html"><b>Places that dont but should have energy</b></a></li>  
-		<li><hr class="dropdown-divider"></hr></li>
-		<li><a class="dropdown-item" href="file:///C:/Users/piotr/Downloads/Web%20design%20CA/index2.html"><b>How we can introduce modern renewable energy</b></a></li>  
-		 
-		</ul>  
-		</li>  
+let valid =true;  
+// This is used to make the variable true //
+let msge="This form is incomplete: ";//This is the message that displays if any of the fields are left blank// 
 
-		</li>  
-		</ul> 
-	
-		
+if(document.getElementById("fn").value  ==  ""){ 
+
+msge+="Please fill in your first name, ";
+ //Message that is shown if the person has left the first name blank// 
+ 
+valid=false;  
+} 
+
+if(document.getElementById("sn").value  ==  ""){ 
+msge+="Please fill in your last name, ";
+ //Message that is shown if person has left the last name blank// 
+ 
+valid=false;    
+} 
+
+if(document.getElementById("num").value == 0) { 
+msge+= "Please fill in a valid phone number, "; 
+valid= false; 
+} 
+
+//valid email 
+
+if(document.getElementById("email").value == ""){ 
+msge+="Please fill in a valid email, "; 
+valid=false; 
+}else if(document.getElementById("email").value !== ""){ 
+inputE = document.getElementById("email").value; 
+let symbol = inputE.indexOf("@"); 
+if(symbol <1){ 
+valid =false; 
+msge+= "Invalid Email"; 
+} 
+
+} 
+if(!valid){ 
+document.getElementById("details").innerHTML =msge; 
+}return valid; 
+} 
+</script>  
